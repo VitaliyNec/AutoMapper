@@ -3,10 +3,10 @@
 namespace AutoMapper
 {
     [AttributeUsage(AttributeTargets.Property)]
-    public class MatchToPropertyToAttribute : Attribute
+    public class MatchPropertyToAttribute : Attribute
     {
         public readonly string Name;
-        public MatchToPropertyToAttribute(string name) => Name = name;
+        public MatchPropertyToAttribute(string name) => Name = name;
 
     }
 }

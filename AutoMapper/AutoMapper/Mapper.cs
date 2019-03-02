@@ -13,18 +13,18 @@ namespace AutoMapper
             var resultProperties = result.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance);
             foreach (var resultProperty in resultProperties)
             {
-                var attributesForProperty = resultProperty.GetCustomAttributes(typeof(MatchToPropertyToAttribute), true);
+                var attributesForProperty = resultProperty.GetCustomAttributes(typeof(MatchPropertyToAttribute), true);
                 var isOfTypeFieldAttribute = false;
 
-                MatchToPropertyToAttribute currentAttribute = null;
+                MatchPropertyToAttribute currentAttribute = null;
                 string currentPropertyName = resultProperty.Name;
 
                 foreach (var attribute in attributesForProperty)
                 {
-                    if (attribute.GetType() == typeof(MatchToPropertyToAttribute))
+                    if (attribute.GetType() == typeof(MatchPropertyToAttribute))
                     {
                         isOfTypeFieldAttribute = true;
-                        currentAttribute = (MatchToPropertyToAttribute)attribute;
+                        currentAttribute = (MatchPropertyToAttribute)attribute;
                         break;
                     }
                 }

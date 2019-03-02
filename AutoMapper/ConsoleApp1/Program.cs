@@ -62,10 +62,10 @@ namespace ConsoleApp1
 
     public class Entity : IEntity
     {
-        [MatchToPropertyTo("Id")]
+        [MatchPropertyTo("Id")]
         public Guid Id { get; set; }
 
-        [MatchToPropertyTo("EntityItems")]
+        [MatchPropertyTo("EntityItems")]
         public IEnumerable<Item> Items { get; set; }
 
     }
@@ -74,7 +74,7 @@ namespace ConsoleApp1
     {
         public Guid Id { get; set; }
 
-        [MatchToPropertyTo("UserName")]
+        [MatchPropertyTo("UserName")]
         public string Name { get; set; }
 
 
@@ -85,7 +85,7 @@ namespace ConsoleApp1
     {
         public Guid Id { get; set; }
 
-        [MatchToPropertyTo("Name")]
+        [MatchPropertyTo("Name")]
         public string UserName { get; set; }
 
         public IEnumerable<ItemView> Items { get; set; }
@@ -95,7 +95,7 @@ namespace ConsoleApp1
     {
         public Guid Id { get; set; }
 
-        [MatchToPropertyTo("Items")]
+        [MatchPropertyTo("Items")]
         public IEnumerable<ItemView> EntityItems { get; set; }
     }
 
