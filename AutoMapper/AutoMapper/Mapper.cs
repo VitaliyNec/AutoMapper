@@ -8,7 +8,7 @@ namespace AutoMapper
 {
     internal static class Mapper
     {
-        public static object MapToObject(object source, object result)
+        public static TResult MapToObject<TSource, TResult>(TSource source, TResult result)
         {
             var resultProperties = result.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance);
             foreach (var resultProperty in resultProperties)
